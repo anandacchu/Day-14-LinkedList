@@ -1,23 +1,20 @@
-﻿namespace LinkedListDemo
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LinkedListProblem
 {
-    class Program
+    public class Node
     {
-        public static void Main(string[] args)
+        public int data;
+        public Node next;
+
+        public Node(int data)
         {
-            LinkedList linkedList = new LinkedList();
-            linkedList.Add(45);
-            linkedList.Add(78);
-            linkedList.Add(48);
-            linkedList.Add(10);
-
-
-            LinkedList linkedList2 = new LinkedList();
-            linkedList.Add(56);
-            linkedList.Add(30);
-            linkedList.Add(70);
-
-            
-            linkedList.Display();
+            this.data = data;
+            this.next = null;
         }
     }
 }

@@ -1,50 +1,46 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LinkedListDemo
+namespace LinkedListProblem
 {
-     public class LinkedList
+    public class LinkedList
     {
         Node head;
-
+        Node current;
         public void Add(int data)
         {
             Node node = new Node(data);
-
+            //no first node added to list
             if (this.head == null)
             {
                 this.head = node;
             }
             else
             {
-                Node temp = head;
-
-                while (temp.next != null)
-                {
-                    temp = temp.next;
-                }
-                temp.next = node;
+                //head is asigned to new node
+                node.next = this.head;
+                this.head = node;
             }
-            Console.WriteLine("{0} inserted into Linked List ", node.data);
+            Console.WriteLine("{0} data is inserted ", node.data);
         }
-
         public void Display()
         {
             Node temp = this.head;
+
             if (temp == null)
             {
-                Console.WriteLine("Linkedlist is empty");
+                Console.WriteLine("LinkedList is empty");
                 return;
             }
-
             while (temp != null)
             {
                 Console.WriteLine(temp.data + " ");
                 temp = temp.next;
             }
         }
+
     }
 }

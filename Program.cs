@@ -1,23 +1,20 @@
-﻿namespace LinkedListDemo
+using System.Collections.Generic;
+
+namespace LinkedList
 {
     class Program
     {
         public static void Main(string[] args)
         {
-            LinkedList linkedList = new LinkedList();
-            linkedList.Add(45);
-            linkedList.Add(78);
-            linkedList.Add(48);
-            linkedList.Add(10);
+            LinkedList<int> list = new LinkedList<int>();
+            list.AddLast(56);
+            list.AddLast(30);
+            list.AddLast(70);
 
-
-            LinkedList linkedList2 = new LinkedList();
-            linkedList.Add(56);
-            linkedList.Add(30);
-            linkedList.Add(70);
-
-            
-            linkedList.Display();
+            foreach (int ele in list)
+            {
+                Console.WriteLine(ele);
+            }
         }
     }
 }

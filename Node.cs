@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LinkedListDemo
+namespace LinkedListProblem
 {
     public class Node
     {
@@ -14,6 +14,7 @@ namespace LinkedListDemo
         public Node(int data)
         {
             this.data = data;
+            this.next = null;
         }
     }
 }
